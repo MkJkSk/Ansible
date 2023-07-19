@@ -1,0 +1,8 @@
+-
+  name:  example_02
+  hosts: client1
+  tasks:
+   - name: code to remove ifconfig
+     yum:
+      name: net-tools
+      state: absent
