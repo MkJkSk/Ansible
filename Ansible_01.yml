@@ -1,0 +1,8 @@
+-
+  name: play on sample exectuion
+  hosts: client 
+  tasks:
+   - name: code to install git
+     yum :
+       name: git
+       state: present
