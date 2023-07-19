@@ -1,8 +1,8 @@
 -
-  name: play on sample exectuion
-  hosts: client 
+  name: PB to sample exectuion
+  hosts: client1
   tasks:
-   - name: code to install git
-     yum :
-       name: git
-       state: present
+   - name: code to install ifconfig command
+      yum :
+       name: net-tools
+       state: install
