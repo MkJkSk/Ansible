@@ -1,8 +1,8 @@
 -
-  name: PB to sample exectuion
-  hosts: client1
-  tasks:
-   - name: code to install ifconfig command
+ name: PB to sample exectuion
+ hosts: client1
+ tasks:
+  -  name: code to install ifconfig command
       yum :
        name: net-tools
        state: install
