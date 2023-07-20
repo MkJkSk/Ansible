@@ -1,13 +1,13 @@
 -
- name: Example of  yum and service module
+ name: pb on  yum and service example
  hosts: client1
  tasks:
- - name: install httpd service
-   yum:
-    name: httpd
-    state: present
+  - name: install httpd service
+    yum:
+     name: httpd
+     state: present
 
- - name: To start the httpd service
-   service:
-    name: httpd
-    state: started
+  - name: To start the httpd service
+    service:
+     name: httpd
+     state: started
