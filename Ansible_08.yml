@@ -1,10 +1,11 @@
 -
  name: playbook on linefile module
  hosts: client1
- tasks: 
- -  name: To replace the word
-    linefile:
-     path: /opt/india/russia.txt
-     state: present
-     regxp: 'HELLO WORLD'
-     line:  'India is great'
+ tasks:
+ - name: replace word 
+   lineinfile: 
+      path: /opt/india/russia.txt
+      state: present
+      regexp: 'HELLO WORLD'
+      line:  'India is great'
+ 
