@@ -8,18 +8,17 @@
     state: directory
 
 
-- name: code to create a file
+ - name: code to create a file
   file: 
    path: /opt/india/russia.txt
    state: touch
 
-- name: code to give exceute  permission
+ - name: code to give exceute  permission
   file:
    path: /opt/india/russia.txt
    mode: u+x
 
-- name: code to write the message into that file
+ - name: code to write the message into that file
   lineinfile: 
    path: /opt/india/russia.txt
    line: 'HELLO WORLD'
-   
