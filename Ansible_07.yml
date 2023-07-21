@@ -9,16 +9,16 @@
 
 
  - name: code to create a file
-  file: 
-   path: /opt/india/russia.txt
-   state: touch
+   file: 
+    path: /opt/india/russia.txt
+    state: touch
 
  - name: code to give exceute  permission
-  file:
-   path: /opt/india/russia.txt
-   mode: u+x
+   file:
+    path: /opt/india/russia.txt
+    mode: u+x
 
  - name: code to write the message into that file
-  lineinfile: 
-   path: /opt/india/russia.txt
-   line: 'HELLO WORLD'
+   lineinfile: 
+    path: /opt/india/russia.txt
+    line: 'HELLO WORLD'
