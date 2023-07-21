@@ -3,9 +3,8 @@
  hosts: client1
  tasks:
  - name: replace word 
-   lineinfile: 
+   replace: 
       path: /opt/india/russia.txt
-      state: present
       regexp: 'HELLO WORLD'
-      line:  'India is great'
+      replace:  'INDIA IS GREAT'
  
