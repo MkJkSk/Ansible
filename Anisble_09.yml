@@ -1,6 +1,6 @@
 -
  name: pb on variable module
- hosts: client1
+ hosts: all
  vars: 
   a: 10
   b: 20
@@ -14,6 +14,6 @@
   
   - name: write code into that file
     lineinfile:
-      path: /opt/india/variable.txt
+      path: /opt/variables.txt
       state: present
       line: "The value of a is {{a}} and value of b is {{b}} and value of c is {{c}} and value of d is {{d}} "
