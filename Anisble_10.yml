@@ -1,7 +1,6 @@
 -
-  name: pb on variable concept
-  hosts: client1
-  vars:
+  name: pb for variable concept
+  hosts: all
    a: 10
    b: 90
    c: "Muzammil Ahmed Khan"
