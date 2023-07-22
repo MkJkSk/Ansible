@@ -1,12 +1,12 @@
 -
- name: pb on variable concept
- hosts: all
- vars:
- a: 10
- b: 90
- c: "Muzammil Ahmed Khan"
- company: "Accenture"
- tasks:
+  name: pb on variable concept
+  hosts: all
+  vars:
+  a: 10
+  b: 90
+  c: "Muzammil Ahmed Khan"
+  company: "Accenture"
+  tasks:
   - name: Below code create a directory
     file:
      path: /opt/var-concept
