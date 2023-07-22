@@ -9,7 +9,7 @@
  tasks:
   -  name: code to create a file
      file:
-      path: /opt/variable.txt
+      path: /opt/variables.txt
       state: touch
   
   - name: write code into that file
