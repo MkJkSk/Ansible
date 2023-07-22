@@ -1,5 +1,5 @@
 -
-  name: pb on variable module
+  name: pb for variable concept
   hosts: all
   vars: 
    a: 10
@@ -9,15 +9,16 @@
   tasks:
    - name: Below code to create a folder
      file:
-      path: /opt/var_concept
+      path: /opt/var-concept
       state: directory
+   
    - name: Below code to create a file
      file:
-      path: /opt/var_concept/data.txt
+      path: /opt/var-concept/data.txt
       state: touch
     
    - name: write code into that file
      lineinfile:
-      path: /opt/var_concept/data.txt
+      path: /opt/var-concept/data.txt
       state: present
       line: "The value of a is {{a}} \n and value of b is {{b}} \n and value of c is {{c}} \n and value of d is {{d}} "
