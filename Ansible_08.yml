@@ -2,9 +2,8 @@
  name: pb on replace module
  hosts: client1
  tasks:
- - name: replace word 
+ - name: replace with given word 
    replace: 
       path: /opt/india/russia.txt
       regexp: 'HELLO WORLD'
       replace:  'INDIA IS GREAT'
- 
