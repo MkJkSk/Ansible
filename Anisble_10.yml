@@ -1,23 +1,23 @@
 -
- name: pb on variable module
- hosts: all
- vars: 
-  a: 10
-  b: 20
-  c: "INDIA IS GREAT"
-  d: MHBG2049
- tasks:
-  -  name: Below code to create a folder
+  name: pb on variable module
+  hosts: all
+  vars: 
+   a: 10
+   b: 20
+   c: "INDIA IS GREAT"
+   d: MHBG2049
+  tasks:
+   - name: Below code to create a folder
      file:
       path: /opt/var_concept
       state: directory
-  -  name: Below code to create a file
+   - name: Below code to create a file
      file:
       path: /opt/var_concept/data.txt
       state: touch
-  
-  - name: write code into that file
-    lineinfile:
+    
+   - name: write code into that file
+     lineinfile:
       path: /opt/var_concept/data.txt
       state: present
       line: "The value of a is {{a}} \n and value of b is {{b}} \n and value of c is {{c}} \n and value of d is {{d}} "
