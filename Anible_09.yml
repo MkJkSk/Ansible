@@ -1,11 +1,11 @@
 -
  name: pb on variable module
- hosts: client1
+ hosts: all
  vars: 
   a: 10
   b: 20
   c: "INDIA IS GREAT"
-  D: MHBG2049
+  d: MHBG2049
  tasks:
   -  name: code to create a file
      file:
