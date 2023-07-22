@@ -1,6 +1,7 @@
 -
   name: pb for variable concept
   hosts: all
+  vars:
    a: 10
    b: 90
    c: "Muzammil Ahmed Khan"
