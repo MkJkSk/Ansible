@@ -1,6 +1,6 @@
 -
   name: pb on variable concept
-  hosts: all
+  hosts: client1
   vars:
    a: 10
    b: 90
