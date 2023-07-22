@@ -6,7 +6,7 @@
    b: 90
    c: "Muzammil Ahmed Khan"
    company: "Accenture"
-   tasks:
+  tasks:
     - name: Below code create a directory
       file:
         path: /opt/var-concept
