@@ -1,24 +1,23 @@
 -
- name: pb for variable concept
- hosts: client1
- vars:
+ name: pb on variable module
+ hosts: all
+ vars: 
   a: 10
-  b: 90
-  c: "Muzammil Ahmed Khan"
-  company: "Accenture"
+  b: 20
+  c: "INDIA IS GREAT"
+  d: MHBG2049
  tasks:
-  - name: Below code create a directory
-    file:
-     path: /opt/var-concept
-     state: directory
-    
-  - name: Below code to create a file
-    file:
-     path: /opt/var-concept/data.text
-     state: touch
-    
-  - name: Below code to write a content into that file
+  -  name: Below code to create a folder
+     file:
+      path: /opt/var_concept
+      state: directory
+  -  name: Below code to create a file
+     file:
+      path: /opt/var_concept/data.txt
+      state: touch
+  
+  - name: write code into that file
     lineinfile:
-     path: /opt/var-concept/data.text
-     state: present
-     line: "The value of a is {{a}} and value of b is {{b}}. and the name of the author is {{c}} and current  company is {{company}}" 
+      path: /opt/var_concept/data.txt
+      state: present
+      line: "The value of a is {{a}} \n and value of b is {{b}} \n and value of c is {{c}} \n and value of d is {{d}} "
