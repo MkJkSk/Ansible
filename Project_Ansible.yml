@@ -1,0 +1,45 @@
+-
+ name: code for Project
+ hosts: client1
+ tasks:
+  - name: update package cache
+    package:
+     name: epel-release
+     state: present
+  - name: code to install Apache-server
+    package:
+     name: httpd
+     state: present
+
+  - name: code to start the httpd-service
+    service:
+     name: httpd
+     state: started
+
+  - name: code to enable httpd at boot-time
+    service:
+      name: httpd
+      enabled: yes
+  - name: code create a Apache-log directory
+    file:
+     path: /opt/Apache-log
+     state: directory
+
+  - name: code to create file in that directory
+    file: 
+     path: /opt/Apache-log/Apache-log.logs
+     state: touch
+
+  - name: code to write some content in that file
+    file:
+     content: " APACHE SUCCESSFULLY INSTALL ON CLIENT-SIDE"
+     dest: /opt/Apache-log/Apache-log.logs
+
+  - name: code to HTML CODE in Apache-web Apache-server
+    copy:
+     dest: /var/www/html/index.html
+     content: "<html>
+               <body>
+               <h1> APACHE PROJECT SAMPLE </h1>
+               </body>
+               </html>"   
