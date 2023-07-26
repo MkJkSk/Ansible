@@ -1,0 +1,8 @@
+-
+ name: example on loop module
+ hosts: client1
+ tasks:
+  - name: Ansible loop installing application
+    yum: 
+     name: ['git', 'docker', 'finger' , 'httpd', 'net-tools' ]
+     state: absent
